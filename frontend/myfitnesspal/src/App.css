@@ -1,0 +1,10 @@
+.App {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Neue Plak UA", Helvetica, Arial, -apple-system, sans-serif;
+  background-color: #fff;
+}
