@@ -1,6 +1,5 @@
 import { Box, Center, Text } from '@chakra-ui/react'
 import React from 'react'
-
 const Calories = () => {
   return (
     <Center display='flex' flexDir='column' >
