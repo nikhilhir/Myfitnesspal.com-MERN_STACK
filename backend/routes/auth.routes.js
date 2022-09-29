@@ -6,7 +6,8 @@ const authRouter = Router();
 require("dotenv").config();
 
 authRouter.post("/signup", (req, res) => {
-  const { name, username, email, password, gender } = req.body;
+ 
+  const { name, username, email, password, gender, dob,country,zipcode,height,estweight,goalweight, } = req.body;
   try {
     bcrypt.hash(password, 6, async function (err, hash) {
       if (!err) {
@@ -16,11 +17,17 @@ authRouter.post("/signup", (req, res) => {
           email,
           password: hash,
           gender,
+          dob,
+          country,
+          zipcode,
+          height,
+          estweight,
+          goalweight,
         });
         await user.save();
         res.status(201).send({ msg: "signup successfull" });
       } else {
-        res.status(500).send("Some error occured");
+        res.status(222).send({msg:"Some error occured"});
       }
     });
   } catch (error) {
@@ -29,9 +36,9 @@ authRouter.post("/signup", (req, res) => {
 });
 
 authRouter.post("/login", async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
   try {
-    const user = await UserModel.findOne({ username });
+    const user = await UserModel.findOne({ email });
     if (user) {
       let hash = user.password;
       bcrypt.compare(password, hash, function (err, result) {
@@ -41,14 +48,14 @@ authRouter.post("/login", async (req, res) => {
           });
           res.status(202).send({ msg: "logged in", token });
         } else {
-          res.status(401).send("Not a valid user");
+          res.status(222).send({msg:"Not a valid user"});
         }
       });
     } else {
-      res.status(502).send("Invalid User");
+      res.status(222).send({msg:"Invalid User"});
     }
   } catch (error) {
-    console.log(error);
+    res.send(error);
   }
 });
 

@@ -11,7 +11,7 @@ import {
 
 const WhichSex = ({ formdata, setFormdata, handleChange}) => {
   return (
-    // <Center minH="50vh">
+  
 
     <Container
       display="flex"
@@ -20,14 +20,14 @@ const WhichSex = ({ formdata, setFormdata, handleChange}) => {
       paddingBottom={5}
       gap={5}
     >
-      <RadioGroup
-        name="gender"
-        onChange={handleChange}
-        value={formdata.gender}
-      >
+  
         <Stack direction="row">
-          <Radio value="male">Male</Radio>
-          <Radio value="female">Female</Radio>
+          <Radio name="gender" onChange={handleChange} value="male">
+            Male
+          </Radio>
+          <Radio name="gender" onChange={handleChange} value="female">
+            Female
+          </Radio>
         </Stack>
         <TransitionExample
           open={"which one should I choose ?"}
@@ -35,7 +35,6 @@ const WhichSex = ({ formdata, setFormdata, handleChange}) => {
             "Male and female sex hormones affect metabolism. We calculate calorie needs differently depending on the sex you select. If you are intersex, taking gender-affirming medications, or aren’t sure which to select for your needs, tap to learn more."
           }
         />
-      </RadioGroup>
 
       <FormControl>
         <FormLabel>When were you born?</FormLabel>
@@ -71,7 +70,7 @@ const WhichSex = ({ formdata, setFormdata, handleChange}) => {
         </FormHelperText>
       </FormControl>
     </Container>
-    // </Center>
+    
   );
 };
 

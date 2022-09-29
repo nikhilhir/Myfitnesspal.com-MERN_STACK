@@ -5,8 +5,6 @@ import {
   Box,
   Button,
   Container,
-  Alert,
-  AlertIcon,
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -18,14 +16,22 @@ import HeightAndWeight from "../Components/HeightAndWeight";
 import EmailPassword from "../Components/EmailPassword";
 import Username from "../Components/Username";
 import Calories from "../Components/Calories";
+import axios from 'axios'
 
 const Signup = () => {
   let [index, setIndex] = useState(0);
-  const [formdata,setFormdata] = useState({
-    gender:"male",dob:"",country:"",zipcode:"",height:"",
-    estweight:"",goalweight:"",email:"",password:"",
-    username:""
-  })
+  const [formdata, setFormdata] = useState({
+    gender: "male",
+    dob: "2022 - 09 - 08",
+    country: "",
+    zipcode: "",
+    height: "",
+    estweight: "",
+    goalweight: "",
+    email: "",
+    password: "",
+    username: "",
+  });
 
   let {gender,dob,country,zipcode,height,estweight,goalweight,email,password,username}= formdata
   let title = [
@@ -57,7 +63,7 @@ const Signup = () => {
      setFormdata({...formdata,[name]:value})
   }
 
-  const handleSubmit=(e)=>{
+  const handleSubmit=async(e)=>{
       e.preventDefault()
       if(!dob||!country||!zipcode||!height
    || !estweight||!goalweight||!email||!password||
@@ -72,7 +78,22 @@ const Signup = () => {
        ),
      });
     }
-      console.log(formdata)
+    
+     await axios({
+        method: "post",
+        url: "http://localhost:8080/auth/signup",
+        data:formdata
+      });
+
+       return toast({
+         position: "top",
+         duration: 3000,
+         render: () => (
+           <Box color="white" p={3} bg="green.300">
+             Sign up successfull......
+           </Box>
+         ),
+       });
   }
 
   return (
@@ -126,22 +147,25 @@ const Signup = () => {
             </FormLabel>
             {/* body */}
             <div>{display()}</div>
-
             {index === title.length - 1 ? (
               <Box textAlign="center" paddingTop={10} paddingBottom={10}>
                 <Button onClick={handleSubmit}>Submit</Button>
               </Box>
-            ) : (
+            ) : 
+            index===0 ?(
+               <Box textAlign="center" paddingTop={10} paddingBottom={10}>
+                <Button onClick={()=>setIndex(1)}>Continue</Button>
+              </Box>
+            ):
+            (
               <Box textAlign="center" paddingTop={10} paddingBottom={10}>
                 <Button
-                  disabled={index === 0 ? true : false}
                   margin={5}
                   onClick={() => setIndex(index - 1)}
                 >
                   Prev
                 </Button>
                 <Button
-                  disabled={index === title.length - 1 ? true : false}
                   margin={5}
                   onClick={() => setIndex(index + 1)}
                 >
