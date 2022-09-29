@@ -11,6 +11,7 @@ import HeightAndWeight from "./Components/HeightAndWeight";
 import EmailPassword from "./Components/EmailPassword";
 import Username from "./Components/Username";
 import Calories from "./Components/Calories";
+// import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      {/* <Footer/> */}
     </div>
   );
 }
