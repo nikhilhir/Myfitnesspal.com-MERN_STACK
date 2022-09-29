@@ -13,18 +13,15 @@ import React from "react";
 
 const Username = () => {
   return (
-    <Center minH="50vh">
-      <Box
-        as="div"
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-      >
+    // <Center minH="50vh">
+   
         <FormControl>
           <Box marginTop={5}>
             <Input marginTop={2} type="Text" placeholder="Create a username" />
           </Box>
         </FormControl>
-      </Box>
-    </Center>
+      
+    // </Center>
   );
 };
 

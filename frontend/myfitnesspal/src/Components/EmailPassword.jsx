@@ -3,11 +3,8 @@ import React from "react";
 
 const EmailPassword = () => {
   return (
-    <Center minH="50vh">
-      <Box
-        as="div"
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-      >
+    // <Center minH="50vh">
+   
         <FormControl>
           <Box marginTop={5}>
             <FormLabel>Almost there! Create your account.</FormLabel>
@@ -18,8 +15,7 @@ const EmailPassword = () => {
             </FormHelperText>
           </Box>
         </FormControl>
-      </Box>
-    </Center>
+  //   </Center>
   );
 };
 

@@ -11,11 +11,8 @@ import {
 
 const WhichSex = () => {
   return (
-    <Center minH="50vh">
-      <Box
-        as="div"
-        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-      >
+    // <Center minH="50vh">
+   
         <Container
           display="flex"
           flexDirection="column"
@@ -55,8 +52,7 @@ const WhichSex = () => {
             </FormHelperText>
           </FormControl>
         </Container>
-      </Box>
-    </Center>
+    // </Center>
   );
 };
 
