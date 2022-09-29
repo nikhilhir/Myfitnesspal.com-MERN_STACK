@@ -8,13 +8,14 @@ import {
   ModalCloseButton,
   Button,
   useDisclosure,
+  Text,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 function TransitionExample(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>{props.open}</Button>
+      <Text color='blue' cursor='pointer' onClick={onOpen}>{props.open}</Text>
       <Modal
         size="xs"
         isCentered

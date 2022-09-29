@@ -5,6 +5,9 @@ import {
   Box,
   Button,
   Container,
+  Alert,
+  AlertIcon,
+  useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import Welcome_signup from "../Components/Welcome_signup";
@@ -18,11 +21,13 @@ import Calories from "../Components/Calories";
 
 const Signup = () => {
   let [index, setIndex] = useState(0);
-  const [formdata,setData] = useState({
-    gender:"",dob:"",country:"",zipcode:"",height:"",
+  const [formdata,setFormdata] = useState({
+    gender:"male",dob:"",country:"",zipcode:"",height:"",
     estweight:"",goalweight:"",email:"",password:"",
     username:""
   })
+
+  let {gender,dob,country,zipcode,height,estweight,goalweight,email,password,username}= formdata
   let title = [
     "",
     "What is your weight goal?",
@@ -36,22 +41,46 @@ const Signup = () => {
   ];
 
   let display = () => {
-    if (index === 0) return <Welcome_signup />;
-    if (index === 1) return <Weightgoal />;
-    if (index === 2) return <ActivityLevel />;
-    if (index === 3) return <WhichSex />;
-    if (index === 4) return <HeightAndWeight />;
-    if (index === 5) return <Calories />;
-    if (index === 6) return <EmailPassword />;
-    if (index === 7) return <Username />;
+    if (index === 0) return <Welcome_signup formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 1) return <Weightgoal formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 2) return <ActivityLevel formdata={formdata} setFormdata={setFormdata} handleChange={handleChange} handleSubmit={handleSubmit} />;
+    if (index === 3) return <WhichSex formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 4) return <HeightAndWeight formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 5) return <Calories formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 6) return <EmailPassword formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 7) return <Username formdata={formdata} setFormdata={setFormdata} handleChange={handleChange} handleSubmit={handleSubmit}/>;
   };
+
+  const toast = useToast();
+  const handleChange=(e)=>{
+     let {name,value}=e.target
+     setFormdata({...formdata,[name]:value})
+  }
+
+  const handleSubmit=(e)=>{
+      e.preventDefault()
+      if(!dob||!country||!zipcode||!height
+   || !estweight||!goalweight||!email||!password||
+    !username){
+     return toast({
+       position: "top",
+       duration: 4000,
+       render: () => (
+         <Box color="white" p={3} bg="red.500">
+           Please fill all the fields, try Again..
+         </Box>
+       ),
+     });
+    }
+      console.log(formdata)
+  }
 
   return (
     <Box as="div" display="flex" alignItems="center" justifyContent="center">
       <Box
         as="div"
         style={{
-          flexDirection:"column",
+          flexDirection: "column",
           borderRadius: "2%",
           marginTop: "8%",
           marginBottom: "10%",
@@ -63,10 +92,32 @@ const Signup = () => {
           boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         }}
       >
-        <div style={{height:"6px",width:"100%",borderRadius:"150px"}}>
-          <div style={{height:"6px",borderRadius:"50px",
-          width:index===0 ? '11.1%' : index===1?"22.2%": index===2?"33.3%" : index===3?"44.4%": index===4?"55.5%": index===5?"66.6%": index===6?"77.7%" :index===7?"88.8%":"100%"
-          ,backgroundColor:"blue"}}></div>
+        <div style={{ height: "6px", width: "100%", borderRadius: "150px" }}>
+          <div
+            style={{
+              height: "6px",
+              borderRadius: "50px",
+              width:
+                index === 0
+                  ? "11.1%"
+                  : index === 1
+                  ? "22.2%"
+                  : index === 2
+                  ? "33.3%"
+                  : index === 3
+                  ? "44.4%"
+                  : index === 4
+                  ? "55.5%"
+                  : index === 5
+                  ? "66.6%"
+                  : index === 6
+                  ? "77.7%"
+                  : index === 7
+                  ? "88.8%"
+                  : "100%",
+              backgroundColor: "blue",
+            }}
+          ></div>
         </div>
         <Container>
           <FormControl>
@@ -76,22 +127,28 @@ const Signup = () => {
             {/* body */}
             <div>{display()}</div>
 
-            <Box textAlign="center" paddingTop={10} paddingBottom={10}>
-              <Button
-                disabled={index === 0 ? true : false}
-                margin={5}
-                onClick={() => setIndex(index - 1)}
-              >
-                Prev
-              </Button>
-              <Button
-                disabled={index === title.length-1 ? true : false}
-                margin={5}
-                onClick={() => setIndex(index + 1)}
-              >
-                Next
-              </Button>
-            </Box>
+            {index === title.length - 1 ? (
+              <Box textAlign="center" paddingTop={10} paddingBottom={10}>
+                <Button onClick={handleSubmit}>Submit</Button>
+              </Box>
+            ) : (
+              <Box textAlign="center" paddingTop={10} paddingBottom={10}>
+                <Button
+                  disabled={index === 0 ? true : false}
+                  margin={5}
+                  onClick={() => setIndex(index - 1)}
+                >
+                  Prev
+                </Button>
+                <Button
+                  disabled={index === title.length - 1 ? true : false}
+                  margin={5}
+                  onClick={() => setIndex(index + 1)}
+                >
+                  Next
+                </Button>
+              </Box>
+            )}
           </FormControl>
         </Container>
       </Box>
