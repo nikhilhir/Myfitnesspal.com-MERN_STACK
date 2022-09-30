@@ -1,6 +1,6 @@
 import "./App.css";
 import TopNavbar from "./Components/TopNavbar";
-import {Routes,Route} from 'react-router-dom'
+import { Routes, Route } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Welcome_signup from "./Components/Welcome_signup";
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       {/* <Welcome_signup/> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={ <Calories/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
