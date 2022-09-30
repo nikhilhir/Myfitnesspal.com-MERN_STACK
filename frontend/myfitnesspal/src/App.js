@@ -11,6 +11,7 @@ import HeightAndWeight from "./Components/HeightAndWeight";
 import EmailPassword from "./Components/EmailPassword";
 import Username from "./Components/Username";
 import Calories from "./Components/Calories";
+import Premium from "./pages/Premium";
 // import Footer from "./Components/Footer";
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
         <Route path="/" element={ <Calories/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-      </Routes> */}
-      <TopNavbar />
+        <Route path="/premium" element={<Premium/>}/>
+      </Routes>
       {/* <Footer/> */}
     </div>
   );

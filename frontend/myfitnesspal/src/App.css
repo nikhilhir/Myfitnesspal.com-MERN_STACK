@@ -8,3 +8,67 @@
   font-family: "Neue Plak UA", Helvetica, Arial, -apple-system, sans-serif;
   background-color: #fff;
 }
+
+
+
+/* Sachin Css */
+
+.gray{
+  color: rgb(157, 157, 157);
+}
+.topsection{
+  background-image: url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhealthy-foods-desktop.448e755c.png&w=750&q=75");
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: right;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 5% 15%;
+}
+.topright{
+  width: 50%;
+}
+.topleft{
+  width: 40%;
+  
+}
+.yellow{
+  background-color: rgb(241, 241, 0);
+  width: 90px;
+  border-radius: 7px;
+  padding: 1px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.leftstart{
+  text-align: left;
+}
+.boldp{
+  font-weight: bold;
+}
+.badgeimg{
+  width: 60%;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 480px) {
+  .topsection{
+    display: block;
+    padding:0%;
+    background-image: url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhealthy-foods-mobile.9d500a85.png&w=425&q=75");
+    background-size: 60%;
+    background-position: top right;
+    width: 100%;
+    padding-left: 10px;
+  }
+  .disable{
+    display: none;
+  }
+  .topleft{
+    width: 80%;
+  }
+
+}
