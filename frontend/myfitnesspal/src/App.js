@@ -5,9 +5,12 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Premium from "./pages/Premium"
 import About from "./pages/About";
+
 import BlogHomepage from "./Components/BlogHomepage";
+
 // import HomePage from "./Components/HomePage";
 // import Footer from "./Components/Footer";
+import { Exercise } from "./pages/Exercise";
 function App() {
   return (
     <div className="App">
@@ -21,7 +24,11 @@ function App() {
       {/* <HomePage/> */}
       {/* <Footer/> */}
       {/* <About/> */}
+
       <BlogHomepage/>
+
+      <Exercise />
+
     </div>
   );
 }
