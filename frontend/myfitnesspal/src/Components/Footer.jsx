@@ -45,7 +45,7 @@ const Footer = () => {
             </p>
           </div>
           <div className={style.Fu4}>
-            <select className="select">
+            <select className={style.select}>
               <option value="">English</option>
               <option value="">Bengali</option>
               <option value="">Albanian</option>

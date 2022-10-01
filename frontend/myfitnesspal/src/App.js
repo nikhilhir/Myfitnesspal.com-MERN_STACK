@@ -11,23 +11,27 @@ import BlogHomepage from "./Components/BlogHomepage";
 // import HomePage from "./Components/HomePage";
 // import Footer from "./Components/Footer";
 import { Exercise } from "./pages/Exercise";
+import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
       {/* <Welcome_signup/> */}
       <Routes>
-        <Route path="/" element={ <TopNavbar/>} />
+        <Route path="/" element={<TopNavbar />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/premium" element={<Premium/>}/>
+        <Route path="/premium" element={<Premium />} />
+      
       </Routes>
       {/* <HomePage/> */}
-      {/* <Footer/> */}
+      <Footer/>
       {/* <About/> */}
+
 
       <BlogHomepage/>
 
       <Exercise />
+
 
     </div>
   );
