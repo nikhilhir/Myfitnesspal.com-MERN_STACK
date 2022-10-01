@@ -8,6 +8,7 @@ import About from "./pages/About";
 import { Allapps } from "./pages/AllappsPage";
 // import HomePage from "./Components/HomePage";
 // import Footer from "./Components/Footer";
+import { Exercise } from "./pages/Exercise";
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,8 @@ function App() {
       {/* <HomePage/> */}
       {/* <Footer/> */}
       {/* <About/> */}
-      <Allapps />
+      {/* <Allapps /> */}
+      <Exercise />
     </div>
   );
 }
