@@ -30,7 +30,7 @@ const SecondDiv = styled.div`
   margin-left: 200px;
   display: flex;
   gap: 30px;
-  padding-top: 10px;
+  padding-top: 15px;
   font-weight: 700;
   font-size: 13px;
   justify-content: center;
