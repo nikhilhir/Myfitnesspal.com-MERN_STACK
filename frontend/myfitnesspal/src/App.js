@@ -5,6 +5,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Premium from "./pages/Premium"
 import About from "./pages/About";
+import BlogHomepage from "./Components/BlogHomepage";
 // import HomePage from "./Components/HomePage";
 // import Footer from "./Components/Footer";
 function App() {
@@ -19,7 +20,8 @@ function App() {
       </Routes>
       {/* <HomePage/> */}
       {/* <Footer/> */}
-      <About/>
+      {/* <About/> */}
+      <BlogHomepage/>
     </div>
   );
 }
