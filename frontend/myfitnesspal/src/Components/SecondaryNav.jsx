@@ -8,6 +8,7 @@ export const SecondaryNav = () => {
         <Link to="/about">ABOUT</Link>
         <Link to="/food">FOOD</Link>
         <Link to="/exercise">EXERCISE</Link>
+        <Link to="/app">APPS</Link>
         <Link to="/community">COMMUNITY</Link>
         <Link to="/blog">BLOG</Link>
         <Link to="/premium">PREMIUM</Link>
