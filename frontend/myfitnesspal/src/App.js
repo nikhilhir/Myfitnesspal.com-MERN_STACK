@@ -9,9 +9,8 @@ import HomePage from "./Components/HomePage";
 import Footer from "./Components/Footer";
 import { SecondaryNav } from "./Components/SecondaryNav";
 import { Allapps } from "./pages/AllappsPage";
-// import HomePage from "./Components/HomePage";
-// import Footer from "./Components/Footer";
 import { Exercise } from "./pages/Exercise";
+import BlogHomepage from "./Components/BlogHomepage";
 
 function App() {
   return (
@@ -22,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/blog" element={<BlogHomepage />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/premium" element={<Premium />} />
