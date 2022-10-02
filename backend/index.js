@@ -6,7 +6,7 @@ const { authRouter } = require("./routes/auth.routes");
 const { authenication } = require("./middlewares/authentication");
 const { connection } = require("./configs/db");
 const { appRouter } = require("./routes/apps.routes");
-
+const { bodyPartRoute } = require("./routes/bodyparts.routes");
 app.use(cors());
 app.use(express.json());
 app.get("/", async (req, res) => {
@@ -14,6 +14,7 @@ app.get("/", async (req, res) => {
 });
 app.use("/auth", authRouter);
 app.use("/apps", appRouter);
+app.use("/bodyparts", bodyPartRoute);
 app.use(authenication);
 app.listen(PORT, async () => {
   await connection;
