@@ -7,29 +7,18 @@ import Premium from "./pages/Premium";
 import About from "./pages/About";
 import HomePage from "./Components/HomePage";
 
-
-
-
-
-
-
-
-
-
 function App() {
   return (
     <div className="App">
       <TopNavbar />
       <SecondaryNav />
       {/* <Welcome_signup/> */}
-      <TopNavbar/>
+      <TopNavbar />
       <Routes>
-
         <Route path="/" element={<HomePage />} />
 
-
-        <Route path="/" element={ <HomePage/>} />
-        <Route path="/about" element={ <About/>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
 
         <Route path="/signup" element={<Signup />} />
         <Route path="/blog" element={<BlogHomepage />} />
@@ -41,13 +30,9 @@ function App() {
       </Routes>
       <Footer />
 
-        <Route path="/premium" element={<Premium/>}/>
-        <Route path="/myhome" element={<Myhome/>}/>
-        <Route path="/food" element={<Food/>}/>
-
-      </Routes>
-  
-
+      <Route path="/premium" element={<Premium />} />
+      <Route path="/myhome" element={<Myhome />} />
+      <Route path="/food" element={<Food />} />
     </div>
   );
 }
