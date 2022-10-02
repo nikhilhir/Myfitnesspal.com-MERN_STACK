@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import top from '../assets/top.png'
-import side from '../assets/side.png'
-import sidebottom from '../assets/sidebottom.png'
-import bottom from '../assets/bottom.png'
-
-
+import top from "../assets/top.png";
+import side from "../assets/side.png";
+import sidebottom from "../assets/sidebottom.png";
+import bottom from "../assets/bottom.png";
 const RightSummaryUP = styled.div`
   // width: 72%;
   display: grid;
@@ -322,7 +320,6 @@ const Para1 = styled.div`
   }
 `;
 
-
 const Para2 = styled.div`
   margin-left: 12px;
   p {
@@ -355,10 +352,9 @@ const Para3 = styled.div`
   }
 `;
 
-
 const MainDiv = styled.div`
   width: 100%;
- margin-top:15px
+  margin-top: 15px;
 `;
 const AdvDiv = styled.div`
   width: 75%;
@@ -448,7 +444,6 @@ const LeftSummaryUP = styled.div`
   }
 `;
 
-
 const Adv2 = styled.div`
   width: 75%;
   height: 280px;
@@ -464,11 +459,8 @@ const Adv2 = styled.div`
 
 const Myhome = () => {
   const navigate = useNavigate();
-  
-
   return (
     <>
-    
       <MainDiv>
         <AdvDiv>
           <img src={top} alt="" />
@@ -502,7 +494,7 @@ const Myhome = () => {
                   <button onClick={() => navigate("/exercise")}>
                     Add Exercise
                   </button>
-                  <button onClick={() => navigate("/foods")}>Add Food</button>
+                  <button onClick={() => navigate("/food")}>Add Food</button>
                 </div>
                 <div>
                   <div>
@@ -540,17 +532,14 @@ const Myhome = () => {
                     <span>LOST</span>
                   </div>
                 </div>
-                <div>
-                </div>
+                <div></div>
                 <div>
                   <p></p>
                 </div>
               </DownSUmmDiv>
             </SummaryBodyUP>
             <EmailDiv>
-              <div>
-        
-              </div>
+              <div></div>
               <div>
                 <h2>Don't forget to verify your email.</h2>
                 <h3>We sent an email to:</h3>
@@ -581,7 +570,6 @@ const Myhome = () => {
                 diet alone.
               </h2>
               <div>
-    
                 <p>Invite By Email</p>
               </div>
             </InviteDiv>
@@ -606,13 +594,10 @@ const Myhome = () => {
                 </ul>
               </div>
             </Para1>
-    
+
             <Para2>
               <div>
-                <img
-                  src={sidebottom}
-                  alt=""
-                />
+                <img src={sidebottom} alt="" />
               </div>
               <div>
                 <p>View All</p>
@@ -645,10 +630,7 @@ const Myhome = () => {
           </RightDiv>
         </BodyDiv>
         <Adv2>
-          <img
-            src={bottom}
-            alt=""
-          />
+          <img src={bottom} alt="" />
         </Adv2>
       </MainDiv>
     </>

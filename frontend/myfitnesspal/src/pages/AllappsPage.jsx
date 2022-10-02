@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Appdiv } from  "../Components/Appdiv"
+import { Appdiv } from "../Components/Appdiv";
 import { Slider } from "../Components/AppSlider";
 
 import "../Styling/AllappsPage.css";
@@ -9,7 +9,7 @@ export const Allapps = () => {
   const [filtApps, setFultApps] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/allapps")
+    fetch("https://blooming-plains-40665.herokuapp.com/apps")
       .then((data) => data.json())
       .then((d) => {
         setApps(d);
