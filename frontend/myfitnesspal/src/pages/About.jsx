@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 import burger from "../assests/burger.png";
-import watch from "../assests/watch.png"
+import watch from "../assests/watch.png";
 
 const About = () => {
   return (
@@ -254,7 +254,11 @@ const About = () => {
                 <label for="remember_me">Remember me next time</label>
               </li>
               <li className="submit">
-                <input type="submit" value="Log In" style={{background:"gray"}} />
+                <input
+                  type="submit"
+                  value="Log In"
+                  style={{ background: "gray" }}
+                />
               </li>
             </ul>
           </div>
@@ -277,40 +281,34 @@ const About = () => {
       </Wrapper>
     </>
   );
-}
+};
 
-export default About
+export default About;
 
 const Wrapper = styled.section`
-  border: 1px solid;
-  margin-top:20px;
+  margin-top: 20px;
   margin: auto;
   padding: 4em;
   display: flex;
   //flex-wrap:wrap;
   align-items: center;
- background: rgb(255, 255, 255);
- font-size: 14px;
- font-family: sans-serif;
+  background: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: sans-serif;
 `;
 
 const LeftDiv = styled.section`
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px;
-  margin  :20px ;
+  margin: 20px;
   margin: auto;
   height: auto;
   width: 60%;
   padding: 30px;
 `;
 
- 
-
- const RightDiv = styled.section`
-  
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 30px;
-    height: auto;
-   margin-bottom: 1000px;
-
- `;
- 
+const RightDiv = styled.section`
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 30px;
+  height: auto;
+  margin-bottom: 1000px;
+`;
