@@ -48,8 +48,8 @@ const Signup = () => {
 
   let display = () => {
     if (index === 0) return <Welcome_signup formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
-    if (index === 1) return <Weightgoal formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
-    if (index === 2) return <ActivityLevel formdata={formdata} setFormdata={setFormdata} handleChange={handleChange} handleSubmit={handleSubmit} />;
+    if (index === 1) return <Weightgoal setIndex={setIndex} index={index} formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
+    if (index === 2) return <ActivityLevel setIndex={setIndex} index={index} formdata={formdata} setFormdata={setFormdata} handleChange={handleChange} handleSubmit={handleSubmit} />;
     if (index === 3) return <WhichSex formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
     if (index === 4) return <HeightAndWeight formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
     if (index === 5) return <Calories formdata={formdata} setFormdata={setFormdata}  handleChange={handleChange} handleSubmit={handleSubmit}/>;
@@ -149,24 +149,53 @@ const Signup = () => {
             <div>{display()}</div>
             {index === title.length - 1 ? (
               <Box textAlign="center" paddingTop={10} paddingBottom={10}>
-                <Button onClick={handleSubmit}>Submit</Button>
+                <Button
+                  variant="solid"
+                  backgroundColor="#0066ee"
+                  color="white"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </Button>
               </Box>
-            ) : 
-            index===0 ?(
-               <Box textAlign="center" paddingTop={10} paddingBottom={10}>
-                <Button onClick={()=>setIndex(1)}>Continue</Button>
-              </Box>
-            ):
-            (
+            ) : index === 0 ? (
               <Box textAlign="center" paddingTop={10} paddingBottom={10}>
                 <Button
+                  variant="solid"
+                  backgroundColor="#0066ee"
+                  color="white"
+                  onClick={() => setIndex(1)}
+                >
+                  Continue
+                </Button>
+              </Box>
+            ) : index === 1 ? (
+              <Box textAlign="center" paddingTop={10} paddingBottom={10}>
+                {/* <Button onClick={() => setIndex(1)}>Continue</Button> */}
+              </Box>
+            ) : index === 2 ? (
+              <Box textAlign="center" paddingTop={10} paddingBottom={10}>
+                {/* <Button onClick={() => setIndex(1)}>Continue</Button> */}
+              </Box>
+            ) : (
+              <Box textAlign="center" paddingTop={10} paddingBottom={10}>
+                <Button
+                  variant="outline"
+                  color="#0066ee"
+                  border="2px solid "
+                  borderColor="#0066ee"
+                  width="22%"
                   margin={5}
                   onClick={() => setIndex(index - 1)}
                 >
                   Prev
                 </Button>
                 <Button
+                  variant="solid"
+                  backgroundColor="#0066ee"
+                  color="white"
                   margin={5}
+                  width="22%"
                   onClick={() => setIndex(index + 1)}
                 >
                   Next

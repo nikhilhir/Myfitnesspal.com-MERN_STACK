@@ -1,8 +1,10 @@
-import { Box, Button, Container, FormControl, FormLabel, Input, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, Container, FormControl, FormLabel, Input, Link, Text, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const Login = () => {
+  const  nav = useNavigate()
    const toast = useToast();
     const [formdata, setFormdata] = useState({
       email:"",password:""
@@ -81,7 +83,9 @@ const Login = () => {
           <Container>
             <FormControl>
               <FormLabel textAlign="center" paddingTop={6} paddingBottom={6}>
-                <Text fontWeight={500} fontSize="2xl">Member Login</Text>
+                <Text fontWeight={500} fontSize="2xl">
+                  Member Login
+                </Text>
               </FormLabel>
               {/* body */}
               <div>
@@ -104,7 +108,11 @@ const Login = () => {
               </div>
 
               <Box textAlign="center" paddingTop={10} paddingBottom={5}>
-                <Button width="90%" backgroundColor="blue.500" onClick={handleSubmit}>
+                <Button
+                  width="90%"
+                  backgroundColor="#0066ee"
+                  onClick={handleSubmit}
+                >
                   LOG IN
                 </Button>
               </Box>
@@ -112,12 +120,15 @@ const Login = () => {
                 OR
               </Text>
               <Box textAlign="center" paddingTop={5} paddingBottom={10}>
-                <Button width="90%" backgroundColor="blue.700">
+                <Button width="90%" backgroundColor="#4267b2">
                   CONTINUE WITH FACEBOOK
                 </Button>
               </Box>
             </FormControl>
           </Container>
+          <Text fontSize="sm" textAlign="center" marginBottom={10}>
+            Not a member yet , <span style={{color:"blue",cursor:"pointer"}} onClick={()=>nav("/signup")}>Sign up now</span>
+          </Text>
         </Box>
       </Box>
     </div>

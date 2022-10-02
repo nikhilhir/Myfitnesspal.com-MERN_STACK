@@ -3,6 +3,7 @@ import ex from "../Styling/exercise.module.css";
 import axios from "axios";
 const Exercise = () => {
   const [search, setSearch] = useState([]);
+  const [data, setData] = useState([]);
   const [find, setFind] = useState("");
   const [w, setW] = useState("");
   const [cx, setCx] = useState("");
@@ -26,14 +27,15 @@ const Exercise = () => {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    getData();
   }
   const handle = (e) => {
-    console.log(e.target.value);
+    setBur(e.target.value);
   };
 
   const handlecx = (e) => {
     setCx(e.target.value);
-    console.log(bur);
+    // console.log(e.target.value);
   };
   const getData = () => {
     const options = {
@@ -48,14 +50,13 @@ const Exercise = () => {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
+        setData(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   };
 
-  getData();
   return (
     <div className={ex.mainb}>
       <section className={ex.bold}>
@@ -70,7 +71,12 @@ const Exercise = () => {
             <input type="submit" />
           </form>
           <p>Matching exercises:</p>
-          <section className={ex.box}></section>
+          <section style={{ overflow: "auto" }} className={ex.box}>
+            {data &&
+              data.map((data) => {
+                return <h6>{data.name}</h6>;
+              })}
+          </section>
         </section>
         <section className={ex.select}>
           <h3>...or choose an exercise below:</h3>
@@ -105,7 +111,8 @@ const Exercise = () => {
               </form>
             </section>
             <span>
-              Calories burned: <span className={ex.g}>{bur}</span>
+              Calories burned:{" "}
+              <span className={ex.g}>{Math.floor(w * cx)}</span>
             </span>
           </section>
         </section>
