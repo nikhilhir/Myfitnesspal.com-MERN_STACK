@@ -81,7 +81,7 @@ const Signup = () => {
     
      await axios({
         method: "post",
-        url: "http://localhost:8080/auth/signup",
+        url: "https://blooming-plains-40665.herokuapp.com/auth/signup",
         data:formdata
       });
 

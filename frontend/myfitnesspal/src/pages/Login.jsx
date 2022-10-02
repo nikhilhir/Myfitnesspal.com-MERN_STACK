@@ -31,7 +31,7 @@ const Login = () => {
     
        let {data}= await axios({
           method: "post",
-          url: "http://localhost:8080/auth/login",
+          url: "https://blooming-plains-40665.herokuapp.com/auth/login",
           data: formdata,
         })
       //  console.log(data);
