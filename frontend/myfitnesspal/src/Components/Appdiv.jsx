@@ -8,7 +8,7 @@ export const Appdiv = ({ data }) => {
       <div className="apDetails">
         <p>{data.name}</p>
         <p> {data.type}</p>
-        <a href={data.link}> {data.type === "Wearables" ? "CONNECT" : "GET"}</a>
+        <a href={data.link}> GET</a>
       </div>
     </div>
   );
