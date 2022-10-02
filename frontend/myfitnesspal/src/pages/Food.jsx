@@ -261,10 +261,21 @@ const Food = () => {
                   <ItemDiv key={e.id}>
                     <div>
                       <h4>{e.name}</h4>
-                      <h6>{e.caloric}</h6>
+                      <div style={{display:"flex",gap:"10px"}}>
+                        <h6>calories:{e.caloric}</h6>
+                        <h6>fat:{e.fat}</h6>
+                        <h6>carbon:{e.carbon}</h6>
+                        <h6>protein:{e.protein}</h6>
+                      </div>
                     </div>
 
-                    <div>
+                    <div
+                      style={{
+                        border: "2px solid black",
+                        borderRadius: "50%",
+                        padding: "10px",
+                      }}
+                    >
                       <h2>{e.caloric}</h2>
                     </div>
                   </ItemDiv>
