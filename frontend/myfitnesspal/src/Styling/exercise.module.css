@@ -1,0 +1,95 @@
+form{
+    width: 100%;
+}
+hr{
+    width: 52vw;
+    color: #0070bf;
+}
+.mainb{
+    margin-top: 1.4rem;
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+}
+.box{
+    margin-top: 2rem;
+    height: 230px;
+    border: 1px solid black;
+
+}
+.bold{
+    margin-left: 18%;
+}
+.bold h2{
+    color: #0070bf;
+    font-weight: 600;
+}
+.dev{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 18%;
+    gap: 5em;
+}
+.search p{
+    color: #0070bf;
+    font-weight: 600;
+}
+.sform p{
+    color: #0070bf;
+    font-weight: 600;
+}
+.sform input[type='text']{
+    outline: none;
+    border: 1px solid white;
+    box-shadow: inset 2px 2px 2px gray;
+    border: 0.5px solid gray;
+    border-radius: 2px;
+    height: 30px;
+    padding: 0px 5px;
+}
+.sform input[type='submit']{
+    height: 30px;
+    font-size: 15px;
+    background-color: green;
+    border: 1px solid green;
+    padding: 0px 6px;
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 2px gray;
+    color: white;
+    margin-left:6px;
+}
+.select h3{
+    color: #0070bf;
+}
+.op select{
+    width: 25em;
+    height: 33px;
+    outline: none;
+    border: 1px solid gray;
+    box-shadow: inset 2px 2px 2px gray;
+    border-radius: 3px;
+}
+.calc{
+    background-color: #f6f6f6;
+    text-align: center;
+    line-height: 3;
+    margin-top: 4em;
+    border-radius: 4px;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+}
+.calc input{
+    width: 4em;
+    margin-right: 1rem;
+}
+.calc span{
+    font-weight: 600;
+}
+.wc, .lc{
+    font-size: 0.7em;
+    font-weight: 600;
+}
+.g{
+    color: green;
+}
