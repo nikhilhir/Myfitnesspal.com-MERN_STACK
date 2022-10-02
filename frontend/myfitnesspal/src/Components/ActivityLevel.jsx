@@ -1,7 +1,7 @@
 import { Box, Button, Center, Container, Text } from "@chakra-ui/react";
 import React from "react";
 
-const ActivityLevel = ({ formdata, setFormdata ,handleChange }) => {
+const ActivityLevel = ({ formdata, setFormdata ,handleChange ,setIndex,index}) => {
   return (
     // <Center minH="50vh">
 
@@ -12,7 +12,13 @@ const ActivityLevel = ({ formdata, setFormdata ,handleChange }) => {
       // paddingBottom={5}
       gap={3}
     >
-      <Container variant="outline" border="2px" borderColor="blackAlpha.400">
+      <Container
+        variant="outline"
+        border="2px"
+        cursor="pointer"
+        borderColor="blackAlpha.400"
+        onClick={() => setIndex(index + 1)}
+      >
         <Text fontSize="xl" color="blue">
           Not Very Active
         </Text>
@@ -25,6 +31,7 @@ const ActivityLevel = ({ formdata, setFormdata ,handleChange }) => {
         border="2px"
         cursor="pointer"
         borderColor="blackAlpha.400"
+        onClick={() => setIndex(index + 1)}
       >
         <Text fontSize="xl" color="blue">
           Lightly Active
@@ -38,6 +45,7 @@ const ActivityLevel = ({ formdata, setFormdata ,handleChange }) => {
         border="2px"
         cursor="pointer"
         borderColor="blackAlpha.400"
+        onClick={() => setIndex(index + 1)}
       >
         <Text fontSize="xl" color="blue">
           Active
@@ -52,6 +60,7 @@ const ActivityLevel = ({ formdata, setFormdata ,handleChange }) => {
         border="2px"
         cursor="pointer"
         borderColor="blackAlpha.400"
+        onClick={() => setIndex(index + 1)}
       >
         <Text fontSize="xl" color="blue">
           Very Active

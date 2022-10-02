@@ -1,0 +1,289 @@
+.top_section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left_column {
+  width: 20%;
+}
+
+.bottom_left_column {
+  background-color: #ffdd33;
+}
+
+.mid_column {
+  width: 100%;
+  background-image: url(https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-collage-top-large%402x.dcc5ac56.png&w=1200&q=75);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right_column {
+  width: 10%;
+  background-color: #ffdd33;
+}
+
+.container {
+  width: 50%;
+  margin: 40px 0;
+}
+
+.description {
+  margin: 30px 0;
+  width: 60%;
+}
+
+.second_section {
+  background-color: #ffdd33;
+}
+
+.second_section_heading {
+    /* border: 1px solid red; */
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.whiteLine {
+  width: 80%;
+  height: 8px;
+  border-radius: 20px;
+  margin: auto;
+  background-color: #fff;
+   /* background-color: rgb(13, 6, 6); */
+  position: relative;
+  top: 35px;
+  z-index: 1;
+}
+
+.second_section_des {
+    padding-top: 30px;
+    width: 35%;
+    margin: auto;
+    text-align: center;
+}
+
+.third_section {
+    width: 100%;
+    height: 300px;
+    padding-top: 40px;
+    background-color: #ffdd33;
+}
+
+.third_section_img {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    background-image: url(https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-collage-search-bottom-large%402x.34b86b17.png&w=3840&q=75);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.input_box {
+    margin: auto;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    padding: 16px;
+}
+
+.inner_input_box {
+    width: 85%;
+    margin: auto;
+}
+
+.search_Icon {
+    padding-top: 8px;
+    width: 6%;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    right: 30px;
+    color: blue;
+}
+
+.inner_input_box input {
+    font-size: 20px;
+    width: 100%;
+    outline: 0;
+}
+/* ******************************************************************* */
+.fourth_section_innerBox {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.fourth_section_des {
+    margin: auto;
+    width: 60%;
+    padding-top: 24px;
+}
+
+.fifth_section {
+    width: 60%;
+    margin: auto;
+}
+
+.fifth_section_heading {
+    margin: 24px;
+    text-align: center;
+}
+
+.fifth_section_des {
+    margin: auto;
+    text-align: center;
+    width:70%;
+    position: relative;
+    margin-bottom: 20px;
+    
+}
+
+.carousel_inner {
+    width: 75%;
+    margin: auto;
+}
+
+.carousel_item {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sixth_section {
+    width: 60%;
+    margin: auto;
+}
+
+.sixth_section_heading {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.sixth_section_cards {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.seventh_section {
+    width: 40%;
+    margin: auto;
+}
+
+.seventh_section_heading {
+    text-align: center;
+}
+
+@media screen and (max-width: 595px) {
+    .left_column, .right_column {
+        display: none;
+    }
+    .mid_column {
+        width: 100%;
+        margin-top: -25px;
+        background-size: contain;
+        background-position: center;
+        width: 100vh;
+        height: 650px;
+    }
+    .container {
+        width: 100%;
+    }
+    .description {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .second-section {
+        margin-top: -335px;
+    }
+    .whiteLine {
+        display: none;
+    }
+    .second_section_heading {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+    }
+    .second_section_des {
+        padding-top: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .third_section {
+        padding-top: 20px;
+        height: 120px;
+    }
+    .third_section_img {
+        width: 80%;
+    }
+    .input_box {
+        width: 100%;
+        padding: 6px;
+    }
+    .inner_input_box input {
+        font-size: 12px;
+        width: 100%;
+        outline: 0;
+    }
+    .search_Icon {
+        padding-top: 6px;
+        width: 3%;
+        font-size: 12px;
+        right: 15px;
+    }
+    .fourth_section_innerBox {
+        width: 90%;
+        margin-top: -40px;
+    }
+    .fourth_section_des {
+        width: 90%;
+        padding-top: 12px;
+    }
+    .fifth_section {
+        width: 90%;
+    }
+    .fifth_section_heading {
+        margin: 8px;
+    }
+    .fifth_section_des {
+        margin: 12px;
+    }
+    .carousel {
+        width: 90%;
+        margin: auto;
+    }
+    .carousel_inner {
+        width: 100%;
+    }
+    .sixth_section {
+        width: 90%;
+    }
+    .sixth_section_heading {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .seventh_section {
+        width: 90%
+        ;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 889px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+}

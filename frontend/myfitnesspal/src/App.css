@@ -15,6 +15,7 @@
 
 .gray{
   color: rgb(157, 157, 157);
+  text-align: center;
 }
 .topsection{
   background-image: url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhealthy-foods-desktop.448e755c.png&w=750&q=75");
@@ -41,18 +42,67 @@
   padding: 1px;
   font-weight: bold;
   margin-top: 20px;
+  text-align: center;
 }
 .leftstart{
   text-align: left;
 }
 .boldp{
   font-weight: bold;
+  text-align: center;
 }
 .badgeimg{
   width: 60%;
   margin: auto;
 }
-
+.goaltable{
+  width: 60%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-top: 2px solid yellow;
+  background-color: white;
+}
+.left{
+  text-align: left;
+}
+.goals{
+  background-image: url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-woman.535f0b88.png&w=384&q=75"), url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-man.e01e1156.png&w=640&q=75");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  margin-top: 50px;
+}
+.topmargin{
+  margin-top: 100px;
+}
+.center{
+  margin: auto;
+}
+.fifty{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.bottomsec{
+  background-image: url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favocado.3cf1d470.png&w=375&q=75"), url("https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fveggies.3bc5dcdb.png&w=750&q=75");
+  background-position: left bottom, right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 10%,25%;
+  margin-bottom: 100px;
+  padding: 200px 0;
+}
+.botbadge{
+  background-color: yellow;
+  border-radius: 10px;
+  padding: 5px;
+}
+.botin{
+  background-color: white;
+  padding: 20px;
+}
+.botflex{
+  width: 50%;
+  margin: auto;
+}
 
 @media screen and (max-width: 480px) {
   .topsection{
@@ -69,6 +119,24 @@
   }
   .topleft{
     width: 80%;
+  }
+  .goaltable{
+    width: 100%;
+  }
+  .boldp{
+    text-align: left;
+  }
+  .gray{
+    text-align: left;
+  }
+  .goals{
+    background-image: none;
+  }
+  .fifty{
+    width: 100%;
+  }
+  .botflex{
+    width: 100%;
   }
 
 }
