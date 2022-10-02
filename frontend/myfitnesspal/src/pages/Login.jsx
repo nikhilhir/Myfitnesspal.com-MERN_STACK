@@ -1,67 +1,76 @@
-import { Box, Button, Container, FormControl, FormLabel, Input, Link, Text, useToast } from '@chakra-ui/react';
-import axios from 'axios';
-import React, { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  FormLabel,
+  Input,
+  Link,
+  Text,
+  useToast,
+} from "@chakra-ui/react";
+import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const  nav = useNavigate()
-   const toast = useToast();
-    const [formdata, setFormdata] = useState({
-      email:"",password:""
-    });
+  const nav = useNavigate();
+  const toast = useToast();
+  const [formdata, setFormdata] = useState({
+    email: "",
+    password: "",
+  });
 
-    let {email,password}= formdata
-    const handleChange = (e) => {
-      let { name, value } = e.target;
-      setFormdata({ ...formdata, [name]: value });
-    };
+  let { email, password } = formdata;
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setFormdata({ ...formdata, [name]: value });
+  };
 
-    const handleSubmit=async()=>{
-      if(!email|| !password){
-             return toast({
-               position: "top",
-               duration: 4000,
-               render: () => (
-                 <Box color="white" p={3} bg="red.500">
-                   Please fill all the fields, try Again..
-                 </Box>
-               ),
-             });
-      }
-    
-       let {data}= await axios({
-          method: "post",
-          url: "https://blooming-plains-40665.herokuapp.com/auth/login",
-          data: formdata,
-        })
-      //  console.log(data);
-        let token=data.token
-        if(token){
-          localStorage.setItem("token", token);
-              return toast({
-                position: "top",
-                duration: 2000,
-                render: () => (
-                  <Box color="white" p={3} bg="green.500">
-                    Logged in successfully
-                  </Box>
-                ),
-              });
-        }
-        else{
-                return toast({
-                  position: "top",
-                  duration: 3000,
-                  render: () => (
-                    <Box color="white" p={3} bg="red.500">
-                     {data.msg}
-                    </Box>
-                  ),
-                });
-        }
-        
-
+  const handleSubmit = async () => {
+    if (!email || !password) {
+      return toast({
+        position: "top",
+        duration: 4000,
+        render: () => (
+          <Box color="white" p={3} bg="red.500">
+            Please fill all the fields, try Again..
+          </Box>
+        ),
+      });
     }
+
+    let { data } = await axios({
+      method: "post",
+      url: "https://blooming-plains-40665.herokuapp.com/auth/login",
+      data: formdata,
+    });
+    //  console.log(data);
+    let token = data.token;
+    if (token) {
+      localStorage.setItem("token", token);
+      toast({
+        position: "top",
+        duration: 2000,
+        render: () => (
+          <Box color="white" p={3} bg="green.500">
+            Logged in successfully
+          </Box>
+        ),
+      });
+      nav("/myhome");
+    } else {
+      return toast({
+        position: "top",
+        duration: 3000,
+        render: () => (
+          <Box color="white" p={3} bg="red.500">
+            {data.msg}
+          </Box>
+        ),
+      });
+    }
+  };
   return (
     <div>
       <Box as="div" display="flex" alignItems="center" justifyContent="center">
@@ -127,12 +136,18 @@ const Login = () => {
             </FormControl>
           </Container>
           <Text fontSize="sm" textAlign="center" marginBottom={10}>
-            Not a member yet , <span style={{color:"blue",cursor:"pointer"}} onClick={()=>nav("/signup")}>Sign up now</span>
+            Not a member yet ,{" "}
+            <span
+              style={{ color: "blue", cursor: "pointer" }}
+              onClick={() => nav("/signup")}
+            >
+              Sign up now
+            </span>
           </Text>
         </Box>
       </Box>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;
