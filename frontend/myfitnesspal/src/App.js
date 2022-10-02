@@ -27,6 +27,12 @@ function App() {
       <Footer/>
       {/* <About/> */}
 
+
+      <BlogHomepage/>
+
+      <Exercise />
+
+
     </div>
   );
 }
