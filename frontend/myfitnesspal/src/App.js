@@ -8,7 +8,6 @@ import About from "./pages/About";
 import HomePage from "./Components/HomePage";
 import BlogHomepage from "./Components/BlogHomepage";
 import { Allapps } from "./pages/AllappsPage";
-
 import { Exercise } from "./pages/Exercise";
 import Footer from "./Components/Footer";
 import { SecondaryNav } from "./Components/SecondaryNav";

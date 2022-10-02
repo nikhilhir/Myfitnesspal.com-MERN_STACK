@@ -5,7 +5,6 @@ import top from "../assets/top.png";
 import side from "../assets/side.png";
 import sidebottom from "../assets/sidebottom.png";
 import bottom from "../assets/bottom.png";
-
 const RightSummaryUP = styled.div`
   // width: 72%;
   display: grid;
@@ -460,7 +459,6 @@ const Adv2 = styled.div`
 
 const Myhome = () => {
   const navigate = useNavigate();
-
   return (
     <>
       <MainDiv>
