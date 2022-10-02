@@ -103,7 +103,9 @@ const DesktopNav = () => {
   return (
     <Stack marginLeft={"145px"} direction={"row"} spacing={4}>
       <Box>
-        <Image h="40px" w="200px" src={svg} alt="Dan Abramov" />
+        <Link href="/">
+          <Image h="40px" w="200px" src={svg} alt="Dan Abramov" />
+        </Link>
       </Box>
     </Stack>
   );
