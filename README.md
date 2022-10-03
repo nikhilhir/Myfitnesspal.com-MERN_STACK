@@ -26,7 +26,8 @@ In this project , we have tried to make a perfect clone of myfitnesspal.com.
   
    <h1>Screenshot View</h1>
 * HomePage:
-* ![image](https://user-images.githubusercontent.com/97525857/193461086-b0db75af-d1ad-4db6-8f08-ef93cc45bd27.png)
+<!-- * ![image](https://user-images.githubusercontent.com/97525857/193461086-b0db75af-d1ad-4db6-8f08-ef93cc45bd27.png) -->
+    * ![image](https://user-images.githubusercontent.com/97525857/193461086-b0db75af-d1ad-4db6-8f08-ef93cc45bd27.png)
 
 
 * Search Food Page: 
